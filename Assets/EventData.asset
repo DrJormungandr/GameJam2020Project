@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   event:
   - Description: "\u0414\u0438\u0432\u043D\u044B\u0439 \u043D\u043E\u0432\u044B\u0439
-      \u043C\u0438\u0440! \u041A\u0430\u043A\u0438\u043C\u0438 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F\u043C\u0438
-      \u0435\u0433\u043E \u043B\u0443\u0447\u0448\u0435 \u0437\u0430\u0441\u0435\u043B\u0438\u0442\u044C?"
+      \u043C\u0438\u0440! \u0415\u0441\u0442\u044C \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
+      \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u043D\u043E\u0432\u044B\u0439 \u0432\u0438\u0434
+      \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0430!"
     Age: 0
     Options:
     - GodName: Jesus
@@ -53,10 +54,10 @@ MonoBehaviour:
       - GodAffected: Cthulhu
         DominanceChange: 1
       - GodAffected: Snek
-        DominanceChange: 1
+        DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0421\u044A\u0435\u0434\u0430\u0442\u044C \u0443\u043C\u0435\u0440\u0448\u0438\u0445
         \u043E\u0442 \u0433\u043E\u043B\u043E\u0434\u0430"
       GodsEffect:
@@ -105,13 +106,19 @@ MonoBehaviour:
       - GodAffected: Snek
         DominanceChange: 1
       - GodAffected: Ganesh
-        DominanceChange: 0
-    - GodName: Ctulhu
+        DominanceChange: -2
+    - GodName: Cthulhu
       Description: "\u041F\u043E\u0441\u0442\u0440\u043E\u0438\u0442\u044C \u0441\u0432\u043E\u044E
         \u043F\u0438\u0440\u0430\u043C\u0438\u0434\u0443, \u0438 \u0431\u043E\u043B\u044C\u0448\u0435!"
       GodsEffect:
+      - GodAffected: Jesus
+        DominanceChange: -1
       - GodAffected: Cthulhu
         DominanceChange: 2
+      - GodAffected: Snek
+        DominanceChange: -1
+      - GodAffected: Ganesh
+        DominanceChange: -1
     - GodName: Snek
       Description: "\u0421\u043E\u0432\u043C\u0435\u0441\u0442\u043D\u0430\u044F
         \u0432\u043E\u0435\u043D\u043D\u0430\u044F \u043A\u0430\u043C\u043F\u0430\u043D\u0438\u044F
@@ -137,7 +144,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 2
-  - Description: "\u0420\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0437\u0430\u043C\u0435\u0434\u043B\u0438\u043B\u043E\u0441\u044C
+  - Description: "\u0420\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0437\u0430\u043C\u0435\u0434\u043B\u0438\u043B\u043E\u0441\u044C,
       \u0438 \u043F\u043E\u0434\u043E\u043F\u0435\u0447\u043D\u044B\u0435 \u043C\u043E\u0433\u0443\u0442
       \u0432\u044B\u043C\u0435\u0440\u0435\u0442\u044C. \u041C\u043E\u0436\u0435\u0442
       \u0441\u0442\u043E\u0438\u0442 \u0434\u0430\u0440\u043E\u0432\u0430\u0442\u044C
@@ -151,7 +158,7 @@ MonoBehaviour:
         DominanceChange: 1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0414\u0430\u0440\u043E\u0432\u0430\u0442\u044C \u0440\u0438\u0442\u0443\u0430\u043B\u044C\u043D\u044B\u0439
         \u0430\u043B\u0442\u0430\u0440\u044C"
       GodsEffect:
@@ -192,26 +199,38 @@ MonoBehaviour:
         DominanceChange: 2
       - GodAffected: Cthulhu
         DominanceChange: -2
-    - GodName: Ctulhu
-      Description: "\u041E\u0441\u044C\u043C\u0438\u043D\u043E\u0436\u043A\u0430\u043C\u0438"
+    - GodName: Cthulhu
+      Description: "\u042D\u0442\u043E \u043C\u043E\u0439 \u043F\u043B\u0435\u043C\u044F\u043D\u043D\u0438\u043A,
+        \u043E\u0442\u043F\u0440\u0430\u0432\u044C\u0442\u0435 \u0434\u043E\u043C\u043E\u0439"
       GodsEffect:
+      - GodAffected: ' Jesus'
+        DominanceChange: -2
       - GodAffected: Cthulhu
-        DominanceChange: 1
+        DominanceChange: 2
     - GodName: Snek
-      Description: "\u0421\u043B\u0430\u0432\u043D\u044B\u043C\u0438 \u0432\u043E\u0438\u043D\u0430\u043C\u0438 "
+      Description: "\u0412\u044B\u0440\u0430\u0441\u0442\u0438\u0442\u044C \u0438\u0437
+        \u043D\u0435\u0433\u043E \u0432\u043E\u0438\u043D\u0430"
       GodsEffect:
+      - GodAffected: ' Jesus'
+        DominanceChange: -1
       - GodAffected: Snek
         DominanceChange: 1
+      - GodAffected: Ganesh
+        DominanceChange: -1
     - GodName: Ganesh
-      Description: "\u0417\u0432\u0435\u0440\u043E\u043B\u044E\u0434\u044C\u043C\u0438"
+      Description: "\u0412\u044B\u0440\u0430\u0441\u0442\u0438\u0442\u044C \u0438\u0437
+        \u043D\u0435\u0433\u043E \u043F\u0430\u0441\u0442\u0443\u0445\u0430 \u0434\u043B\u044F
+        \u043A\u043E\u0440\u043E\u0432"
       GodsEffect:
+      - GodAffected: Snek
+        DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
   - Description: "\u0412\u0430\u0448 \u0436\u0440\u0435\u0446 \u043D\u0430\u0440\u0438\u0441\u043E\u0432\u0430\u043B
       \u0432 \u0411\u0435\u0441\u0442\u0438\u0430\u0440\u0438\u0438 \u0433\u0438\u0433\u0430\u043D\u0442\u0430
       \u0441 \u0434\u0432\u0443\u043C\u044F \u0433\u043E\u043B\u043E\u0432\u0430\u043C\u0438
       \u0438 \u0447\u0435\u0442\u044B\u0440\u0435\u043C\u044F \u043D\u043E\u0433\u0430\u043C\u0438.
-      \u0415\u043C\u0443 \u043D\u0438\u043A\u0442\u043E \u043D\u0435 \u0432\u0435\u0440\u0438\u0442.... "
+      \u0415\u043C\u0443 \u043D\u0438\u043A\u0442\u043E \u043D\u0435 \u0432\u0435\u0440\u0438\u0442... "
     Age: 1
     Options:
     - GodName: Jesus
@@ -227,7 +246,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041F\u0440\u0438\u043D\u0435\u0441\u0442\u0438 \u0432 \u043C\u0438\u0440
         \u044D\u0442\u043E \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E!"
       GodsEffect:
@@ -247,7 +266,7 @@ MonoBehaviour:
       - GodAffected: Jesus
         DominanceChange: -1
       - GodAffected: Snek
-        DominanceChange: 3
+        DominanceChange: 2
       - GodAffected: Ganesh
         DominanceChange: -1
     - GodName: Ganesh
@@ -259,7 +278,7 @@ MonoBehaviour:
       - GodAffected: Ganesh
         DominanceChange: 1
   - Description: "\u0418\u0437\u0431\u0440\u0430\u043D\u043D\u044B\u0439 \u043F\u0440\u043E\u0431\u0443\u0434\u0438\u043B\u0441\u044F,
-      \u043D\u043E \u043D\u0435 \u044F\u0441\u043D\u043E \u043A\u0430\u043A\u043E\u0433\u043E
+      \u043D\u043E \u043D\u0435 \u044F\u0441\u043D\u043E, \u043A\u0430\u043A\u043E\u0433\u043E
       \u0431\u043E\u0433\u0430. "
     Age: 1
     Options:
@@ -270,7 +289,7 @@ MonoBehaviour:
       GodsEffect:
       - GodAffected: Jesus
         DominanceChange: 2
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0414\u0430\u0440\u043E\u0432\u0430\u0442\u044C \u0435\u043C\u0443
         \u0432\u043D\u0435\u0437\u0435\u043C\u043D\u0443\u044E \u043C\u0430\u0433\u0438\u044E
         (\u0438 \u0431\u0435\u0437\u0443\u043C\u0438\u0435)"
@@ -306,7 +325,7 @@ MonoBehaviour:
         DominanceChange: 1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041F\u0440\u0438\u0437\u0432\u0430\u0442\u044C \u043E\u0434\u043D\u043E\u0433\u0440\u0443\u043F\u043F\u043D\u0438\u043A\u0430
         \u0438\u0437 \u0420'\u041B\u044C\u0435\u0445"
       GodsEffect:
@@ -357,7 +376,7 @@ MonoBehaviour:
         DominanceChange: 1
       - GodAffected: Cthulhu
         DominanceChange: -2
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0434\u0435\u043B\u0430\u0442\u044C"
       GodsEffect:
       - GodAffected: Jesus
@@ -372,6 +391,8 @@ MonoBehaviour:
       Description: "\u0420\u0430\u0437\u0440\u0443\u0448\u0438\u0442\u044C \u043C\u0435\u0442\u0435\u043E\u0440\u0438\u0442\u043D\u044B\u043C
         \u0434\u043E\u0436\u0434\u0451\u043C"
       GodsEffect:
+      - GodAffected: Cthulthu
+        DominanceChange: -2
       - GodAffected: Snek
         DominanceChange: 1
     - GodName: Ganesh
@@ -385,7 +406,7 @@ MonoBehaviour:
   - Description: "\u041F\u043E\u0445\u043E\u0436\u0435 \u043E\u0434\u0438\u043D \u0438\u0437
       \u043F\u043E\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439,
       \u041D\u0430\u043F\u043B\u0435\u0432\u043E\u043D, \u0437\u0430\u0445\u0432\u0430\u0442\u044B\u0432\u0430\u0435\u0442
-      \u0432\u0435\u0441\u044C \u043C\u0438\u0440"
+      \u0432\u0435\u0441\u044C \u043C\u0438\u0440!"
     Age: 2
     Options:
     - GodName: Jesus
@@ -401,7 +422,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041F\u0440\u0438\u043D\u044F\u0442\u044C \u0435\u0433\u043E
         \u0432 \u043A\u0443\u043B\u044C\u0442, \u043F\u043E\u043A\u0430 \u043D\u0435
         \u043F\u043E\u0437\u0434\u043D\u043E"
@@ -451,7 +472,7 @@ MonoBehaviour:
         DominanceChange: 1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0417\u0430\u0442\u043E\u043F\u0438\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0438\u0435
         \u0433\u043E\u0440\u043E\u0434\u0430"
       GodsEffect:
@@ -506,7 +527,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0423\u0441\u0442\u0440\u043E\u0438\u0442\u044C \u043B\u044E\u0434\u0441\u043A\u0438\u0435
         \u0436\u0435\u0440\u0442\u0432\u043E\u043F\u0440\u0438\u043D\u043E\u0448\u0435\u043D\u0438\u044F"
       GodsEffect:
@@ -556,7 +577,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041D\u0438\u0447\u0435\u0433\u043E \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u0433\u043E,
         \u044F \u0442\u0430\u043A \u0436\u0435 \u043F\u0440\u043E\u0432\u043E\u0436\u0443
         \u0432\u0440\u0435\u043C\u044F"
@@ -578,7 +599,7 @@ MonoBehaviour:
       - GodAffected: Snek
         DominanceChange: 2
       - GodAffected: Ganesh
-        DominanceChange: -1
+        DominanceChange: -2
     - GodName: Ganesh
       Description: "\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0431\u0435\u0434\u043D\u043E\u0435
         \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E \u0432 \u043F\u043E\u043A\u043E\u0435"
@@ -602,7 +623,7 @@ MonoBehaviour:
       GodsEffect:
       - GodAffected: Jesus
         DominanceChange: 2
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0412\u043D\u0435\u0441\u0442\u0438 \u0432\u0441\u0435 \u0442\u0435\u043C\u044B
         \u0432 \u043A\u043E\u043B\u0435\u0441\u043E \u0438 \u0432\u044B\u0431\u0440\u0430\u0442\u044C
         \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E"
@@ -614,9 +635,7 @@ MonoBehaviour:
         \u043A\u043D\u043E\u043F\u043A\u0430"
       GodsEffect:
       - GodAffected: Snek
-        DominanceChange: 1
-      - GodAffected: Snek
-        DominanceChange: 1
+        DominanceChange: 2
     - GodName: Ganesh
       Description: "\u0422\u0430\u0439\u043D\u0430 \u0438\u043D\u0434\u0438\u0439\u0441\u043A\u043E\u0433\u043E
         \u043B\u0435\u0441\u0430"
@@ -638,7 +657,7 @@ MonoBehaviour:
         DominanceChange: -2
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0422\u0430\u0439\u043D\u043E \u043F\u0440\u0438\u043D\u044F\u0442\u044C
         \u0438\u0445 \u0432 \u0441\u0432\u043E\u0439 \u043A\u0443\u043B\u044C\u0442"
       GodsEffect:
@@ -676,7 +695,7 @@ MonoBehaviour:
       - GodAffected: Ganesh
         DominanceChange: 1
   - Description: "\u0413\u0440\u0430\u0434\u0443\u0441 \u043D\u0430\u043F\u0440\u044F\u0436\u0451\u043D\u043D\u043E\u0441\u0442\u0438
-      \u0440\u0430\u0441\u0442\u0451\u0442 \u0438 \u0441\u043A\u043E\u0440\u043E
+      \u0440\u0430\u0441\u0442\u0451\u0442, \u0438 \u0441\u043A\u043E\u0440\u043E
       \u043F\u043E\u0434\u043E\u043F\u0435\u0447\u043D\u044B\u0435 \u043F\u043E\u0433\u0440\u0443\u0437\u044F\u0442\u0441\u044F
       \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0432\u043E\u0439\u043D\u0443!"
     Age: 3
@@ -693,7 +712,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
         \u0441\u0443\u043C\u0430\u0442\u043E\u0445\u0443 \u0434\u043B\u044F \u0443\u0441\u0438\u043B\u0435\u043D\u0438\u044F
         \u043A\u0443\u043B\u044C\u0442\u043E\u0432"
@@ -748,7 +767,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0434\u0435\u043B\u0430\u0442\u044C
         \u0438 \u0440\u0430\u0441\u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u044F\u0442\u044C
         \u043E\u0431\u0440\u0435\u0447\u0451\u043D\u043D\u043E\u0441\u0442\u044C"
@@ -804,7 +823,7 @@ MonoBehaviour:
         DominanceChange: -1
       - GodAffected: Ganesh
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041F\u043E\u0441\u0442\u0440\u043E\u0438\u0442\u044C \u043D\u0435\u0447\u0438\u0441\u0442\u0438\u0432\u044B\u0439
         \u0445\u0440\u0430\u043C \u043F\u043E\u0434 \u0432\u0443\u043B\u043A\u0430\u043D\u043E\u043C"
       GodsEffect:
@@ -828,10 +847,9 @@ MonoBehaviour:
         DominanceChange: 1
       - GodAffected: Ganesh
         DominanceChange: -1
-    - GodName: "\u0423\u0441\u043F\u043E\u043A\u043E\u0438\u0442\u044C \u0432\u0443\u043B\u043A\u0430\u043D
+    - GodName: Ganesh
+      Description: "\u0423\u0441\u043F\u043E\u043A\u043E\u0438\u0442\u044C \u0432\u0443\u043B\u043A\u0430\u043D
         \u043C\u0435\u043B\u043E\u0434\u0438\u0447\u043D\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u043E\u0439"
-      Description: "\u041E\u043D\u0438 \u043F\u0440\u043E\u0441\u0442\u043E \u0438\u0433\u0440\u0430\u044E\u0442!
-        \u041D\u0435 \u0442\u0440\u043E\u0433\u0430\u0442\u044C \u0438\u0445"
       GodsEffect:
       - GodAffected: Jesus
         DominanceChange: 1
