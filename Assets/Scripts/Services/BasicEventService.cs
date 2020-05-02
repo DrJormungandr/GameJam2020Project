@@ -13,12 +13,17 @@ namespace Assets.Scripts.Services
     public class BasicEventService : IEventService
     {
         Canvas Canvas;
-        public void EventResult(EventOption option, God[] gods)
+        public void EventResult(EventOption option, Dictionary<string, God> godStats)
         {
             List<EventGodEffect> godEffects = option.GodsEffect.ToList();
+            foreach (EventGodEffect godEffect in godEffects)
+            {
+                godStats[godEffect.GodAffected].Dominance += godEffect.DominanceChange;
+            }
+            /*
             foreach ( EventGodEffect godEffect in godEffects)
             {
-                foreach( God god in gods)
+                foreach( God god in godStats)
                 {
                     if (god.Name == godEffect.GodAffected)
                     {
@@ -26,12 +31,13 @@ namespace Assets.Scripts.Services
                     }
                 }
             }
+            */
         }
 
-        public Event GenerateEvent(EventsData eventsData, Ages Age)
+        public Event GenerateEvent(Event[] eventsList, Ages Age)
         {
             List<Event> ageEvents = new List<Event>();
-            foreach (Event @event in eventsData.@event)
+            foreach (Event @event in eventsList)
             {
                 if (@event.Age == Age)
                 {
@@ -39,7 +45,7 @@ namespace Assets.Scripts.Services
                 }
             }
             int eventNum = UnityEngine.Random.Range(0, (ageEvents.ToArray().Length-1));
-            Event outEvent = eventsData.@event[eventNum];
+            Event outEvent = eventsList[eventNum];
             return outEvent;
         }
 

@@ -1,16 +1,17 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Models;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GodScript : MonoBehaviour
 {
-    bool clickActive= false;
-    public string godName;
+    bool clickActive = false;
+    public God stats = new God();
     private GameObject MainScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,8 +24,7 @@ public class GodScript : MonoBehaviour
     {
         if (clickActive)
         {
-            Debug.Log("Clicked");
-            MainScript.SendMessage("GodClicked", godName);
+            MainScript.SendMessage("GodClicked", stats.Name);
             clickActive = false;
 
         }
@@ -32,7 +32,6 @@ public class GodScript : MonoBehaviour
 
     private void OnEventFired()
     {
-        Debug.Log("Event Fired");
         clickActive = true;
     }
 }

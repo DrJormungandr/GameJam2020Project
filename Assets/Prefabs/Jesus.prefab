@@ -1274,7 +1274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f962c1da5ac19f34fa3ee9ba2d9376a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godName: Jesus
+  stats:
+    Name: Jesus
+    Description: 
+    Dominance: 5
 --- !u!1 &1358165067905071495
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ namespace Assets.Scripts.Models
     public class God
     {
        public string Name;
-       public GameObject GodGO;
        public string Description;
        public int Dominance;
     }
