@@ -18,7 +18,7 @@ MonoBehaviour:
     Description: 
     Dominance: 5
   - Name: Ganesh
-    GodGO: {fileID: 8809115130808969967, guid: 42c05d1b336a45742bc6787bf94064a8, type: 3}
+    GodGO: {fileID: 2957856285893104234, guid: 65c577011b256c3419d45f0a388b1fc9, type: 3}
     Description: 
     Dominance: 5
   - Name: Snek
