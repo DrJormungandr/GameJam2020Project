@@ -2157,7 +2157,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f962c1da5ac19f34fa3ee9ba2d9376a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godName: Cthulhu
+  stats:
+    Name: Cthulhu
+    Description: none
+    Dominance: 5
+  dominanceBar: {fileID: 5103469398117257869, guid: 0eaef0632073e8b4b9069c950bd306fc,
+    type: 3}
 --- !u!1 &2665256821612539320
 GameObject:
   m_ObjectHideFlags: 0

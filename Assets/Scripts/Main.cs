@@ -30,7 +30,14 @@ public class Main : MonoBehaviour
         foreach(Transform god in GameObject.Find("Gods").transform)
         {
             currentGods.Add(god.gameObject);
-            God godStats = god.GetComponent<GodScript>().stats;
+            God godStats;
+            try
+            {
+                godStats = god.GetComponent<GodScript>().stats;
+            } catch
+            {
+                godStats = new God();
+            }
             godObjectStats.Add(godStats.Name, god.GetComponent<GodScript>().stats);
         }
 
@@ -67,7 +74,17 @@ public class Main : MonoBehaviour
             var collider = god.GetComponent<CapsuleCollider>();
             bubble.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 400);
             string godsName = god.GetComponent<GodScript>().stats.Name;
-            EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == godsName);
+            EventOption option;
+            try
+            {
+                option = @event.Options.First(ev => ev.GodName == godsName);
+            } catch
+            {
+                option = new EventOption();
+                option.GodName = godsName;
+                option.Description = $"ERR: {@event.Description}";
+                
+            }
             TextMeshProUGUI optionText = bubble.transform.Find("OptionText").GetComponent<TextMeshProUGUI>();
             optionText.text = option.Description;
             bubble.SetActive(true);
