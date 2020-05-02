@@ -14,8 +14,13 @@ public class Main : MonoBehaviour
   //  public GodSO godsList;
     Dictionary<string, God> godObjectStats =  new Dictionary<string, God>();
     List<GameObject> bubbles = new List<GameObject>();
+    [SerializeField]
+    public Ages[] ages;
+    public int eventsPerAge;
+    private int agesCounter = 0;
+    private int eventsCounter = 0;
     public EventsData eventsData;
-    Event[] eventList;
+    List<Event> eventList;
     public GameObject Bubble;
     IEventService eventService;
     GameObject canvas;
@@ -40,10 +45,7 @@ public class Main : MonoBehaviour
             }
             godObjectStats.Add(godStats.Name, god.GetComponent<GodScript>().stats);
         }
-
-
-
-        eventList = (Event[])eventsData.@event.Clone();
+        eventList = ((Event[])eventsData.@event.Clone()).ToList<Event>();
         this.eventService = new BasicEventService();
         this.canvas = GameObject.Find("Canvas");
         this.textmesh = canvas.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
@@ -66,7 +68,11 @@ public class Main : MonoBehaviour
 
     void StartEvent()
     {
-        @event = eventService.GenerateEvent(this.eventList, Ages.Age1);
+        Debug.Log($"event {eventsCounter}");
+        checkEventsPerAge();
+        Debug.Log($"age {agesCounter}");
+        @event = eventService.GenerateEvent(this.eventList.ToArray(), ages[agesCounter]);
+        eventsCounter++;
         this.textmesh.text = @event.Description;
         foreach ( GameObject god in currentGods) {
             GameObject bubble = Instantiate(this.Bubble, this.canvas.transform);
@@ -100,12 +106,26 @@ public class Main : MonoBehaviour
     {
         EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == godName);
         eventService.EventResult(option, godObjectStats);
-        StartCoroutine(Wait());
-         foreach (GameObject bubble in bubbles)
+        if (agesCounter < ages.Length )
         {
-            Destroy(bubble);
+            StartCoroutine(Wait());
+            foreach (GameObject bubble in bubbles)
+            {
+                Destroy(bubble);
+            }
+            this.eventList.Remove(@event);
+        } else
+        {
+            Debug.Log("GAMOVER, YOU ARE WON!!!");
         }
-        
     }
 
+    private void checkEventsPerAge()
+    {
+        if (eventsCounter >= eventsPerAge)
+        {
+            eventsCounter = 0;
+            agesCounter++;
+        }
+    }
 }

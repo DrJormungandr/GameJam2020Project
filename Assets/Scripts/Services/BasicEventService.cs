@@ -34,7 +34,7 @@ namespace Assets.Scripts.Services
                 }
             }
             int eventNum = UnityEngine.Random.Range(0, (ageEvents.ToArray().Length-1));
-            Event outEvent = eventsList[eventNum];
+            Event outEvent = ageEvents[eventNum];
             return outEvent;
         }
 
