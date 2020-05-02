@@ -18,11 +18,16 @@ public class Main : MonoBehaviour
     IEventService eventService;
     GameObject canvas;
     TextMeshProUGUI textmesh;
-    public 
+    private Event @event;
+    private List<GameObject> currentGods = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
+        foreach( Transform god in GameObject.Find("Gods").transform)
+        {
+            currentGods.Add(god.gameObject);
+        }
         gods = godsList.gods;
         this.eventService = new BasicEventService();
         this.canvas = GameObject.Find("Canvas");
@@ -39,18 +44,16 @@ public class Main : MonoBehaviour
 
     IEnumerator Wait() {
         yield return new WaitForSeconds(3);
-        Debug.Log("EventStarted");
-        this.StartEvent();
+        StartEvent();
 
     }
 
 
     void StartEvent()
     {
-        Event @event = this.eventService.GenerateEvent(this.eventsData, Ages.Age1);
+        @event = eventService.GenerateEvent(this.eventsData, Ages.Age1);
         this.textmesh.text = @event.Description;
         foreach ( God god in gods) {
-            Debug.Log(god.GodGO.transform.position);
             GameObject Bubble = Instantiate(this.Bubble, this.canvas.transform);
             
             Bubble.transform.position = RectTransformUtility.WorldToScreenPoint(Camera.main, god.GodGO.transform.position) + new Vector2(0, 120);
@@ -60,11 +63,23 @@ public class Main : MonoBehaviour
             Bubble.SetActive(true);
         }
         StopCoroutine(this.Wait());
+        foreach( GameObject go in currentGods) {
+            go.SendMessage("OnEventFired");
+        }
+      //  SendMessage("onEventFired");
     }
 
-    void Clicked()
+    void GodClicked(string godName)
     {
-        this.eventService.EventResult(eventsData.@event[0].Options[0], gods);
+        EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == godName);
+        eventService.EventResult(option, gods);
+        StartCoroutine(Wait());
+        foreach (God god in gods)
+        {
+            Debug.Log(god.Name);
+            Debug.Log(god.Dominance);
+        }
+        
     }
 
 }
