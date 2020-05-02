@@ -10,6 +10,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Services
 {
+
     public class BasicEventService : IEventService
     {
         Canvas Canvas;
@@ -43,3 +44,4 @@ namespace Assets.Scripts.Services
         }
     } 
 }
+
