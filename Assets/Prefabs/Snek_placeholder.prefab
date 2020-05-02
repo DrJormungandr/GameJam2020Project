@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2839204433120454126}
   - component: {fileID: 2839204433120454127}
   - component: {fileID: 2839204433120454120}
+  - component: {fileID: 365186469}
+  - component: {fileID: 5809672509488504540}
   m_Layer: 9
   m_Name: Snek_placeholder
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2839204433120454125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.22, y: -2.13, z: 3.0214844}
   m_LocalScale: {x: 1.849053, y: 1.849053, z: 1.849053}
   m_Children: []
@@ -125,3 +127,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!136 &365186469
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839204433120454125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.56
+  m_Height: 7.31
+  m_Direction: 1
+  m_Center: {x: 0.00000047683716, y: 0, z: 0}
+--- !u!114 &5809672509488504540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839204433120454125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f962c1da5ac19f34fa3ee9ba2d9376a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  godName: Snek

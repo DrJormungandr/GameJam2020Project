@@ -13,7 +13,8 @@ public class Main : MonoBehaviour
 {
     public GodSO godsList;
     public God[] gods;
-    public EventsData eventsData;
+    public EventsData eventsDataSO;
+    public Event[] eventList;
     public GameObject Bubble;
     IEventService eventService;
     GameObject canvas;
@@ -28,6 +29,7 @@ public class Main : MonoBehaviour
         {
             currentGods.Add(god.gameObject);
         }
+        eventList = eventsDataSO.@event;
         gods = godsList.gods;
         this.eventService = new BasicEventService();
         this.canvas = GameObject.Find("Canvas");
@@ -55,8 +57,9 @@ public class Main : MonoBehaviour
         this.textmesh.text = @event.Description;
         foreach ( God god in gods) {
             GameObject Bubble = Instantiate(this.Bubble, this.canvas.transform);
-            
-            Bubble.transform.position = RectTransformUtility.WorldToScreenPoint(Camera.main, god.GodGO.transform.position) + new Vector2(0, 120);
+            var collider = god.GodGO.GetComponent<CapsuleCollider>();
+            //Bubble.transform.position = RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.center)) + new Vector2(collider.center.x, 249);
+            Bubble.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 400);
             EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == god.Name);
             TextMeshProUGUI optionText = Bubble.transform.Find("OptionText").GetComponent<TextMeshProUGUI>();
             optionText.text = option.Description;
@@ -64,6 +67,7 @@ public class Main : MonoBehaviour
         }
         StopCoroutine(this.Wait());
         foreach( GameObject go in currentGods) {
+            Debug.Log(go.name);
             go.SendMessage("OnEventFired");
         }
       //  SendMessage("onEventFired");
