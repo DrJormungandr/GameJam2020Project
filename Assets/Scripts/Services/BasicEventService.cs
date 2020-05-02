@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Interfaces;
+﻿using Assets.Scripts.Enums;
+using Assets.Scripts.Interfaces;
 using Assets.Scripts.Models;
 using System;
 using System.Collections.Generic;
@@ -27,13 +28,19 @@ namespace Assets.Scripts.Services
             }
         }
 
-        public Event GenerateEvent()
+        public Event GenerateEvent(EventsData eventsData, Ages Age)
         {
-            Event @event = new Event();
-       /*     List<EventOption> options = new List<EventOption>();
-            @event.Description = "Ты пес";
-            @event.Options = options.ToArray(); */
-            return @event; 
+            List<Event> ageEvents = new List<Event>();
+            foreach (Event @event in eventsData.@event)
+            {
+                if (@event.Age == Age)
+                {
+                    ageEvents.Add(@event);
+                }
+            }
+            int eventNum = UnityEngine.Random.Range(0, (ageEvents.ToArray().Length-1));
+            Event outEvent = eventsData.@event[eventNum];
+            return outEvent;
         }
 
         public void StartEvent(Event @event)
