@@ -32,7 +32,6 @@ public class Main : MonoBehaviour
             currentGods.Add(god.gameObject);
             God godStats = god.GetComponent<GodScript>().stats;
             godObjectStats.Add(godStats.Name, god.GetComponent<GodScript>().stats);
-            
         }
 
 

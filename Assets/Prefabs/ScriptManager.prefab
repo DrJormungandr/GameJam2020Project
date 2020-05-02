@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4216883675585347727}
   - component: {fileID: 4216883675585347726}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: ScriptManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987cd0f5fd8c7d043bce9e209ddedc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godsList: {fileID: 11400000, guid: b330174f234b9984cae65529e316b3cc, type: 2}
-  gods: []
   eventsData: {fileID: 11400000, guid: a1cddcd8ea077874791642b2bdce846d, type: 2}
-  Bubble: {fileID: 2674762994670335067, guid: b237ce5c43799034c9ffba9d34148343, type: 3}
+  Bubble: {fileID: 5413019723451191120, guid: b237ce5c43799034c9ffba9d34148343, type: 3}

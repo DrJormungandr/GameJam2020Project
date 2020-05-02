@@ -21,19 +21,6 @@ namespace Assets.Scripts.Services
             {
                 godStats[godEffect.GodAffected].Dominance += godEffect.DominanceChange;
             }
-            /*
-            foreach ( EventGodEffect godEffect in godEffects)
-            {
-                foreach( God god in godStats)
-                {
-                    if (god.Name == godEffect.GodAffected)
-                    {
-                        god.Dominance += godEffect.DominanceChange;
-
-                    }
-                }
-            }
-            */
         }
 
         public Event GenerateEvent(Event[] eventsList, Ages Age)
@@ -55,33 +42,6 @@ namespace Assets.Scripts.Services
         {
 
         }
-
-        /*
-        private EventOption generateEventOption(string optionDescription, string nameOfGod)
-        {
-            EventOption option = new EventOption();
-            List<EventGodEffect> godsAndEffect = new List<EventGodEffect>(); ;
-
-            godsAndEffect.Add(generateGodAndEffect("Jesus", 3));
-            godsAndEffect.Add(generateGodAndEffect("Cthulu", -5));
-            godsAndEffect.Add(generateGodAndEffect("Jormungandr", 5));
-
-            EventWorldEffect worldEffect = new EventWorldEffect();
-            option.Description = optionDescription;
-            option.GodName = nameOfGod;
-            option.GodsEffect = godsAndEffect.ToArray();
-            option.WorldEffect = worldEffect;
-            return option;
-        }
-
-        private EventGodEffect generateGodAndEffect(string godName, int dominanceChange)
-        {
-            EventGodEffect godEffect = new EventGodEffect();
-            godEffect.GodAffected = godName;
-            godEffect.DominanceChange = dominanceChange;
-
-            return godEffect;
-        } */
     } 
 }
 

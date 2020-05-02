@@ -1277,7 +1277,9 @@ MonoBehaviour:
   stats:
     Name: Jesus
     Description: 
-    Dominance: 5
+    Dominance: -3
+  dominanceBar: {fileID: 5103469398117257869, guid: 0eaef0632073e8b4b9069c950bd306fc,
+    type: 3}
 --- !u!1 &1358165067905071495
 GameObject:
   m_ObjectHideFlags: 0

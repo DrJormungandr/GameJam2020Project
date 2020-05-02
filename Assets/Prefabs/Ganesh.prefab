@@ -357,6 +357,8 @@ MonoBehaviour:
     Name: Ganesh
     Description: none
     Dominance: 5
+  dominanceBar: {fileID: 5103469398117257869, guid: 0eaef0632073e8b4b9069c950bd306fc,
+    type: 3}
 --- !u!136 &85102254669495901
 CapsuleCollider:
   m_ObjectHideFlags: 0
