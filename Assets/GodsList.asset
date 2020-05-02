@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gods:
   - Name: Jesus
-    GodGO: {fileID: 4081104075929481845, guid: 1c15a2d736e104a41965313aaeedfb7f, type: 3}
+    GodGO: {fileID: 5798920813466120908, guid: 2d06e476f5b90e646ad12ed6f95a5a6b, type: 3}
     Description: 
     Dominance: 5
   - Name: Ganesh
