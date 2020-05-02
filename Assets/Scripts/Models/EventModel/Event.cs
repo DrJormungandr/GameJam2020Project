@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Models;
+﻿using Assets.Scripts.Enums;
+using Assets.Scripts.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,5 +8,6 @@ using System.Collections.Generic;
 public class Event
 {
     public string Description;
+    public Ages Age;
     public EventOption[] Options;
 }

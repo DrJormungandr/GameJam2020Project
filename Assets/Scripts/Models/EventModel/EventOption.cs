@@ -10,8 +10,8 @@ namespace Assets.Scripts.Models
     [Serializable]
     public class EventOption
     {
-        public string Description;
         public string GodName;
+        public string Description;
         public EventGodEffect[] GodsEffect;
         public EventWorldEffect WorldEffect;
     }
