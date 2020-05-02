@@ -10,5 +10,6 @@ namespace Assets.Scripts.Models
     [Serializable]
     public class EventWorldEffect
     {
+
     }
 }

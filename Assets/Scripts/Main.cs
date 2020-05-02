@@ -11,10 +11,11 @@ using System.Linq;
 
 public class Main : MonoBehaviour
 {
-    public GodSO godsList;
-    public God[] gods;
-    public EventsData eventsDataSO;
-    public Event[] eventList;
+  //  public GodSO godsList;
+    Dictionary<string, God> godObjectStats =  new Dictionary<string, God>();
+    List<GameObject> bubbles = new List<GameObject>();
+    public EventsData eventsData;
+    Event[] eventList;
     public GameObject Bubble;
     IEventService eventService;
     GameObject canvas;
@@ -25,12 +26,18 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach( Transform god in GameObject.Find("Gods").transform)
+        
+        foreach(Transform god in GameObject.Find("Gods").transform)
         {
             currentGods.Add(god.gameObject);
+            God godStats = god.GetComponent<GodScript>().stats;
+            godObjectStats.Add(godStats.Name, god.GetComponent<GodScript>().stats);
+            
         }
-        eventList = eventsDataSO.@event;
-        gods = godsList.gods;
+
+
+
+        eventList = (Event[])eventsData.@event.Clone();
         this.eventService = new BasicEventService();
         this.canvas = GameObject.Find("Canvas");
         this.textmesh = canvas.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
@@ -55,19 +62,19 @@ public class Main : MonoBehaviour
     {
         @event = eventService.GenerateEvent(this.eventsDataSO, Ages.Age1);
         this.textmesh.text = @event.Description;
-        foreach ( God god in gods) {
-            GameObject Bubble = Instantiate(this.Bubble, this.canvas.transform);
-            var collider = god.GodGO.GetComponent<CapsuleCollider>();
-            //Bubble.transform.position = RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.center)) + new Vector2(collider.center.x, 249);
-            Bubble.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 400);
-            EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == god.Name);
-            TextMeshProUGUI optionText = Bubble.transform.Find("OptionText").GetComponent<TextMeshProUGUI>();
+        foreach ( GameObject god in currentGods) {
+            GameObject bubble = Instantiate(this.Bubble, this.canvas.transform);
+            bubbles.Add(bubble);
+            var collider = god.GetComponent<CapsuleCollider>();
+            bubble.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 400);
+            string godsName = god.GetComponent<GodScript>().stats.Name;
+            EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == godsName);
+            TextMeshProUGUI optionText = bubble.transform.Find("OptionText").GetComponent<TextMeshProUGUI>();
             optionText.text = option.Description;
-            Bubble.SetActive(true);
+            bubble.SetActive(true);
         }
         StopCoroutine(this.Wait());
         foreach( GameObject go in currentGods) {
-            Debug.Log(go.name);
             go.SendMessage("OnEventFired");
         }
       //  SendMessage("onEventFired");
@@ -76,12 +83,11 @@ public class Main : MonoBehaviour
     void GodClicked(string godName)
     {
         EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == godName);
-        eventService.EventResult(option, gods);
+        eventService.EventResult(option, godObjectStats);
         StartCoroutine(Wait());
-        foreach (God god in gods)
+         foreach (GameObject bubble in bubbles)
         {
-            Debug.Log(god.Name);
-            Debug.Log(god.Dominance);
+            Destroy(bubble);
         }
         
     }

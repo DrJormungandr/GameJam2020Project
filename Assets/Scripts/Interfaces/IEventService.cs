@@ -5,13 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Interfaces
 {
     interface IEventService
     {
-        Event GenerateEvent( EventsData events, Ages Age);
+        Event GenerateEvent( Event[] eventsList, Ages Age);
         void StartEvent(Event @event);
-        void EventResult(EventOption option, God[] gods);
+        void EventResult(EventOption option, Dictionary<string, God> godStats);
     }
 }

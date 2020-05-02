@@ -353,7 +353,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f962c1da5ac19f34fa3ee9ba2d9376a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godName: Ganesh
+  stats:
+    Name: Ganesh
+    Description: none
+    Dominance: 5
 --- !u!136 &85102254669495901
 CapsuleCollider:
   m_ObjectHideFlags: 0
