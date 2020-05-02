@@ -25,7 +25,7 @@ MonoBehaviour:
       GodsEffect:
       - GodAffected: Jesus
         DominanceChange: 1
-    - GodName: Ctulhu
+    - GodName: Cthulhu
       Description: "\u041E\u0441\u044C\u043C\u0438\u043D\u043E\u0436\u043A\u0430\u043C\u0438"
       GodsEffect:
       - GodAffected: Cthulhu

@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5103469398117257870}
   - component: {fileID: 5103469398117257871}
   m_Layer: 0
-  m_Name: DominanceBar 1
+  m_Name: DominanceBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,10 +107,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -327.2, y: 316.9}
-  m_SizeDelta: {x: -1517.6776, y: -693.0066}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -157.1, y: 121.5}
+  m_SizeDelta: {x: 38.03517, y: -314.19717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5103469398117257870
 MonoBehaviour:
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 5
+  m_Value: 6
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
