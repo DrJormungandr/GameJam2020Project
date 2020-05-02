@@ -53,7 +53,7 @@ public class Main : MonoBehaviour
 
     void StartEvent()
     {
-        @event = eventService.GenerateEvent(this.eventsData, Ages.Age1);
+        @event = eventService.GenerateEvent(this.eventsDataSO, Ages.Age1);
         this.textmesh.text = @event.Description;
         foreach ( God god in gods) {
             GameObject Bubble = Instantiate(this.Bubble, this.canvas.transform);

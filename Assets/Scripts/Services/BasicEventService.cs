@@ -10,6 +10,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Services
 {
+
     public class BasicEventService : IEventService
     {
         Canvas Canvas;
@@ -23,6 +24,7 @@ namespace Assets.Scripts.Services
                     if (god.Name == godEffect.GodAffected)
                     {
                         god.Dominance += godEffect.DominanceChange;
+
                     }
                 }
             }
@@ -76,3 +78,4 @@ namespace Assets.Scripts.Services
         } */
     } 
 }
+
