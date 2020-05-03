@@ -78,7 +78,7 @@ public class Main : MonoBehaviour
             GameObject bubble = Instantiate(this.Bubble, this.canvas.transform);
             bubbles.Add(bubble);
             var collider = god.GetComponent<CapsuleCollider>();
-            bubble.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 400);
+            bubble.transform.position = new Vector2(collider.transform.position.x, 7);
             string godsName = god.GetComponent<GodScript>().stats.Name;
             EventOption option;
             try

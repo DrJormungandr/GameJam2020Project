@@ -868,7 +868,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7015662858890365634, guid: 24ce3634d06741a4ca81b19d71a72a4e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1692,7 +1692,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 977791846730268513, guid: 24ce3634d06741a4ca81b19d71a72a4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1942,7 +1942,7 @@ MonoBehaviour:
     Name: Snek
     Description: SNAAAAAAAAAAAAAKE!!!
     Dominance: 5
-  dominanceBar: {fileID: 5103469398117257869, guid: 0eaef0632073e8b4b9069c950bd306fc,
+  dominanceBar: {fileID: 7890983237240810413, guid: 0eaef0632073e8b4b9069c950bd306fc,
     type: 3}
 --- !u!1 &201307573862227912
 GameObject:

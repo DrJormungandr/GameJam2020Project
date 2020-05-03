@@ -23,7 +23,7 @@ public class GodScript : MonoBehaviour
         var collider = GetComponent<CapsuleCollider>();
         slider = dbar.GetComponent<Slider>();
         slider.value = stats.Dominance;
-        dbar.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 450);
+        dbar.transform.position = new Vector2(collider.transform.position.x, 9);
 
     }
 
