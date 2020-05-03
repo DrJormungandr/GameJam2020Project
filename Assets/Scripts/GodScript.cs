@@ -16,7 +16,8 @@ public class GodScript : MonoBehaviour
     private GameObject MainScript;
     private Slider slider;
 
-    public Animator animator; //for animation purposes A.
+    public Animator animator; //for animation purposes
+    public GameObject outerRim; //the border
 
     // Start is called before the first frame update
     void Start()
@@ -68,5 +69,19 @@ public class GodScript : MonoBehaviour
     private void OnEventFired()
     {
         clickActive = true;
+    }
+
+    private void OnMouseOver()
+    {
+        if (EventFired.godsClickable == true)
+        {
+            outerRim.SetActive(true);
+        }
+           
+    }
+
+    private void OnMouseExit()
+    {
+        outerRim.SetActive(false);
     }
 }
