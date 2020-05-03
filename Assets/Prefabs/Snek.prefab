@@ -176,8 +176,8 @@ MonoBehaviour:
   - {fileID: 201307572170606365}
   - {fileID: 201307572917029250}
   m_Bounds:
-    m_Center: {x: -0.9657109, y: -0.6585415, z: 0}
-    m_Extent: {x: 1.1402128, y: 0.79348725, z: 0}
+    m_Center: {x: -0.9657104, y: -0.6585414, z: 0}
+    m_Extent: {x: 1.1402123, y: 0.79348737, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &201307572042951490
@@ -708,8 +708,8 @@ MonoBehaviour:
   - {fileID: 201307572466292714}
   - {fileID: 201307573366704613}
   m_Bounds:
-    m_Center: {x: 0.06534684, y: -0.0048807263, z: 0}
-    m_Extent: {x: 0.62070674, y: 0.6111808, z: 0}
+    m_Center: {x: 0.06534612, y: -0.0048807263, z: 0}
+    m_Extent: {x: 0.620707, y: 0.6111808, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &201307572442761954
@@ -821,7 +821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201307572450324615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 201307573862227913}
@@ -912,8 +912,8 @@ MonoBehaviour:
   - {fileID: 201307573732542070}
   - {fileID: 201307572852920533}
   m_Bounds:
-    m_Center: {x: 0.0832057, y: 0.054601192, z: 0}
-    m_Extent: {x: 3.126451, y: 3.1342716, z: 0}
+    m_Center: {x: 0.08320522, y: 0.054601192, z: 0}
+    m_Extent: {x: 3.1264515, y: 3.1342716, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &201307572450324609
@@ -1886,7 +1886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201307573744224382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.93, y: -2.27, z: 3.0214844}
+  m_LocalPosition: {x: 14.93, y: -3.3, z: 3.0214844}
   m_LocalScale: {x: 1.849053, y: 1.849053, z: 1.849053}
   m_Children:
   - {fileID: 201307572450324608}
@@ -1942,8 +1942,9 @@ MonoBehaviour:
     Name: Snek
     Description: SNAAAAAAAAAAAAAKE!!!
     Dominance: 5
-  dominanceBar: {fileID: 7890983237240810413, guid: 0eaef0632073e8b4b9069c950bd306fc,
+  dominanceBar: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
     type: 3}
+  animator: {fileID: 2020817254223683202}
 --- !u!1 &201307573862227912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,8 +2115,8 @@ MonoBehaviour:
   - {fileID: 5183774649926400104}
   - {fileID: 8164030494901000899}
   m_Bounds:
-    m_Center: {x: -0.03500104, y: -0.000410676, z: 0}
-    m_Extent: {x: 2.0602596, y: 1.5849607, z: 0}
+    m_Center: {x: -0.035000563, y: -0.0004105568, z: 0}
+    m_Extent: {x: 2.06026, y: 1.5849608, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2820627098091014125

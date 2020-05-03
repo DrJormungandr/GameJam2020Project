@@ -15,6 +15,9 @@ public class GodScript : MonoBehaviour
     private GameObject canvas;
     private GameObject MainScript;
     private Slider slider;
+
+    public Animator animator; //for animation purposes A.
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +58,8 @@ public class GodScript : MonoBehaviour
     {
         if (EventFired.godsClickable == true)
         {
+            FindObjectOfType<AudioSystem>().Play("GodClick");
+            animator.SetTrigger("talk");
             MainScript.SendMessage("GodClicked", stats.Name);
             EventFired.godsClickable = false;
         }
