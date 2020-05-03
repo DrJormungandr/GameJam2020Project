@@ -55,6 +55,7 @@ public class GodScript : MonoBehaviour
     {
         if (EventFired.godsClickable == true)
         {
+            FindObjectOfType<AudioSystem>().Play("GodClick");
             MainScript.SendMessage("GodClicked", stats.Name);
             EventFired.godsClickable = false;
         }
