@@ -15,6 +15,7 @@ public class Main : MonoBehaviour
   //  public GodSO godsList;
     Dictionary<string, God> godObjectStats =  new Dictionary<string, God>();
     List<GameObject> bubbles = new List<GameObject>();
+    List<GameObject> scrolls = new List<GameObject>();
     [SerializeField]
     public Ages[] ages;
     public int eventsPerAge;
@@ -23,6 +24,7 @@ public class Main : MonoBehaviour
     public EventsData eventsData;
     List<Event> eventList;
     public GameObject Bubble;
+    public GameObject scroll;
     IEventService eventService;
     GameObject canvas;
     TextMeshProUGUI textmesh;
@@ -50,7 +52,7 @@ public class Main : MonoBehaviour
         this.eventService = new BasicEventService();
         this.canvas = GameObject.Find("Canvas");
         this.textmesh = canvas.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-        StartCoroutine(this.Wait());
+        StartCoroutine(this.StartNextEvent());
 
     }
 
@@ -60,12 +62,18 @@ public class Main : MonoBehaviour
         
     }
 
-    IEnumerator Wait() {
-        yield return new WaitForSeconds(3);
+    IEnumerator StartNextEvent() {
+        yield return new WaitForSeconds(5);
+        var scrl = Instantiate(scroll, this.canvas.transform);
+        scrolls.Add(scrl);
+        yield return new WaitForSeconds(1);
         StartEvent();
-
     }
 
+    IEnumerator Wait( int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
 
     void StartEvent()
     {
@@ -85,7 +93,7 @@ public class Main : MonoBehaviour
         }
         @event = eventService.GenerateEvent(this.eventList.ToArray(), ages[agesCounter]);
         eventsCounter++;
-        this.textmesh.text = @event.Description;
+        textmesh.text = @event.Description;
         foreach ( GameObject god in currentGods) {
             GameObject bubble = Instantiate(this.Bubble, this.canvas.transform);
             bubbles.Add(bubble);
@@ -107,12 +115,11 @@ public class Main : MonoBehaviour
             optionText.text = option.Description;
             bubble.SetActive(true);
         }
-        StopCoroutine(this.Wait());
+        StopCoroutine(this.StartNextEvent());
         EventFired.godsClickable = true;
         foreach( GameObject go in currentGods) {
             go.SendMessage("OnEventFired");
         }
-      //  SendMessage("onEventFired");
     }
 
     void GodClicked(string godName)
@@ -125,12 +132,20 @@ public class Main : MonoBehaviour
         {
             Debug.LogError($"ERROR in: {option.Description}; WrongGodAffectedNames: {e}");
         }
-            StartCoroutine(Wait());
-            foreach (GameObject bubble in bubbles)
-            {
-                Destroy(bubble);
-            }
-            this.eventList.Remove(@event);
+        Destroyer(bubbles);
+        Destroyer(scrolls);
+        textmesh.text = "";
+        this.eventList.Remove(@event);
+        StartCoroutine(StartNextEvent());
+
+    }
+
+    private void Destroyer(List<GameObject> go)
+    {
+        foreach (GameObject obj in go)
+        {
+            Destroy(obj);
+        }
     }
 
     private void checkEventsPerAge()
