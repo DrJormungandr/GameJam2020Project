@@ -280,8 +280,8 @@ MonoBehaviour:
   - {fileID: 1358165067141966793}
   - {fileID: 1358165066395549696}
   m_Bounds:
-    m_Center: {x: -0.18421748, y: -0.9392539, z: 0}
-    m_Extent: {x: 0.37776503, y: 1.0980502, z: 0}
+    m_Center: {x: -0.18421742, y: -0.93925405, z: 0}
+    m_Extent: {x: 0.37776497, y: 1.0980504, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1358165066122938301
@@ -1278,8 +1278,9 @@ MonoBehaviour:
     Name: Jesus
     Description: 
     Dominance: 5
-  dominanceBar: {fileID: 7890983237240810413, guid: 0eaef0632073e8b4b9069c950bd306fc,
+  dominanceBar: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
     type: 3}
+  animator: {fileID: 1358165067900917294}
 --- !u!1 &1358165067905071495
 GameObject:
   m_ObjectHideFlags: 0
