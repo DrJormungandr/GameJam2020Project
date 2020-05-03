@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 495145845256096866}
   - component: {fileID: 6679820181855936881}
   m_Layer: 0
-  m_Name: God1
+  m_Name: Ganesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,9 +1018,10 @@ MonoBehaviour:
   stats:
     Name: Ganesh
     Description: none
-    Dominance: 10
+    Dominance: 5
   dominanceBar: {fileID: 7890983237240810413, guid: 0eaef0632073e8b4b9069c950bd306fc,
     type: 3}
+  maxDominance: 10
 --- !u!136 &6679820181855936881
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -10,4 +10,6 @@ public class Event
     public string Description;
     public Ages Age;
     public EventOption[] Options;
+    public bool tiedtoDialogue;
+    public string tiedDialogueId;
 }
