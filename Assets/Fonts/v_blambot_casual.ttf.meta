@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00dc0cf80963b0048bdb87357fd34a76
+guid: 1ecc6813bc1b5f54d92efef08a1e163c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Domkrat
+  fontName: v_Blambot Casual
   fontNames:
-  - Domkrat
+  - v_Blambot Casual
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

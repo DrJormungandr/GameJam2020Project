@@ -17,6 +17,7 @@ public class GodScript : MonoBehaviour
 
     public Animator animator; //for animation purposes
     public GameObject outerRim; //the border
+    public AudioSource audioSource; //audio for God Voice
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,7 @@ public class GodScript : MonoBehaviour
         if (EventFired.godsClickable == true)
         {
             FindObjectOfType<AudioSystem>().Play("GodClick"); //plays click sfx
+            audioSource.Play(); //play god voice
             animator.SetTrigger("talk");
             MainScript.SendMessage("GodClicked", stats.Name);
             EventFired.godsClickable = false;

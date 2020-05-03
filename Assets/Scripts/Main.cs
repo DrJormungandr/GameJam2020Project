@@ -170,6 +170,11 @@ public class Main : MonoBehaviour
             optionText.text = dialogueSequence[0].Phrase;
             bubble.SetActive(true);
             dialogueSequence.RemoveAt(0);
+            Animator sayerAnimator = sayer.GetComponent<Animator>();
+            sayerAnimator.SetTrigger("talk");
+            AudioSource audioSource = sayer.GetComponent<AudioSource>();
+            audioSource.Play();
+
         }
         else
         {

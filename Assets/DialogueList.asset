@@ -33,7 +33,7 @@ MonoBehaviour:
       Phrase: "\u041D\u0435 \u0432\u0438\u0436\u0443 \u043D\u0438\u0447\u0435\u0433\u043E
         \u0441\u043C\u0435\u0448\u043D\u043E\u0433\u043E"
     - CharacterName: Cthulhu
-      Phrase: "\u0410 \u043C\u043D\u0435 \u043D\u0440\u0430\u0432"
+      Phrase: "\u0410 \u043C\u043D\u0435 \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F"
   - dialogueId: 3
     tiedToEvent: 1
     sequence:
