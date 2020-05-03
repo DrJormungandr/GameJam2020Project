@@ -46,4 +46,6 @@ MonoBehaviour:
   ages: 00000000010000000200000003000000
   eventsPerAge: 4
   eventsData: {fileID: 11400000, guid: a1cddcd8ea077874791642b2bdce846d, type: 2}
+  dialoguesList: {fileID: 11400000, guid: 85f81334b5ac9d844b1dec690521ab5a, type: 2}
   Bubble: {fileID: 5413019723451191120, guid: b237ce5c43799034c9ffba9d34148343, type: 3}
+  scroll: {fileID: 1742021395227082910, guid: e2bf5ea7d8feb0141b655ac97939ab70, type: 3}

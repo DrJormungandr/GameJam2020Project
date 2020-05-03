@@ -59,8 +59,7 @@ public class GodScript : MonoBehaviour
     {
         if (EventFired.godsClickable == true)
         {
-            FindObjectOfType<AudioSystem>().Play("GodClick");
-            FindObjectOfType<AudioSystem>().Play("GaneshVoice");
+            FindObjectOfType<AudioSystem>().Play("GodClick"); //plays click sfx
             animator.SetTrigger("talk");
             MainScript.SendMessage("GodClicked", stats.Name);
             EventFired.godsClickable = false;
@@ -72,7 +71,7 @@ public class GodScript : MonoBehaviour
         clickActive = true;
     }
 
-    private void OnMouseOver()
+    private void OnMouseOver() //highlights shit when you mouse over and when an event is active
     {
         if (EventFired.godsClickable == true)
         {
@@ -81,7 +80,7 @@ public class GodScript : MonoBehaviour
            
     }
 
-    private void OnMouseExit()
+    private void OnMouseExit() //stops highlighting shit when ur not mousing over
     {
         outerRim.SetActive(false);
     }
