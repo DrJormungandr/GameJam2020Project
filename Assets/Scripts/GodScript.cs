@@ -61,13 +61,13 @@ public class GodScript : MonoBehaviour
         {
             FindObjectOfType<AudioSystem>().Play("GodClick"); //plays click sfx
             audioSource.Play(); //play god voice
-            animator.SetTrigger("talk");
-            MainScript.SendMessage("GodClicked", stats.Name);
+            animator.SetTrigger("talk"); //sets off the trigger for talk animation
+            MainScript.SendMessage("GodClicked", stats.Name); //Sends whomst've summoned the main script to main script?
             EventFired.godsClickable = false;
         }
     }
 
-    private void OnEventFired()
+    private void OnEventFired() //as useless as u lol)
     {
      
     }

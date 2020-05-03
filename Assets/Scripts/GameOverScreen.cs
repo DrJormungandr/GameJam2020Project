@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOverScreen : MonoBehaviour
 {
     TextMeshProUGUI text;
+    public Sprite[] sprites;
+
     void Start()
     {
         var canvas = GameObject.Find("Canvas");
@@ -42,11 +45,13 @@ public class GameOverScreen : MonoBehaviour
     {
         if (EndGame.won)
         {
-            text.text = "Jesus won";
+            gameObject.GetComponent<Image>().sprite = sprites[0];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
         else
         {
-            text.text = "Jesus died for your sins, dipshit";
+            gameObject.GetComponent<Image>().sprite = sprites[1];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
     }
 
@@ -54,22 +59,26 @@ public class GameOverScreen : MonoBehaviour
     {
         if (EndGame.won)
         {
-            text.text = "Ganesh won";
+            gameObject.GetComponent<Image>().sprite = sprites[2];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
         else
         {
-            text.text = "Elephant-Hippie died";
+            gameObject.GetComponent<Image>().sprite = sprites[3];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
     }
     private void senderCthulhu()
     {
         if (EndGame.won)
         {
-            text.text = "Cthulhu won";
+            gameObject.GetComponent<Image>().sprite = sprites[4];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
         else
         {
-            text.text = "Cthulhu fell asleep(and died)";
+            gameObject.GetComponent<Image>().sprite = sprites[5];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
     }
 
@@ -77,11 +86,13 @@ public class GameOverScreen : MonoBehaviour
     {
         if (EndGame.won)
         {
-            text.text = "Jormungandr won";
+            gameObject.GetComponent<Image>().sprite = sprites[6];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
         else
         {
-            text.text = "Not being capable to handle this much stress, Jormungandr ate himself completely";
+            gameObject.GetComponent<Image>().sprite = sprites[7];
+            FindObjectOfType<AudioSystem>().Play("Lose");
         }
     }
 
@@ -89,11 +100,12 @@ public class GameOverScreen : MonoBehaviour
     {
         if (EndGame.won)
         {
-            text.text = "You won, congratulations";
+            gameObject.GetComponent<Image>().sprite = sprites[8];
+            FindObjectOfType<AudioSystem>().Play("Win");
         }
         else
         {
-            text.text = "WTF?! This is not supposed to happen";
+            Debug.Log("lol u broke da game");
         }
     }
 }

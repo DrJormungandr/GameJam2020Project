@@ -47,3 +47,6 @@ TagManager:
   - name: Gods
     uniqueID: 4246260049
     locked: 0
+  - name: Earth
+    uniqueID: 1803083845
+    locked: 0
