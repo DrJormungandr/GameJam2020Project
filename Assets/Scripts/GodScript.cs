@@ -60,6 +60,7 @@ public class GodScript : MonoBehaviour
         if (EventFired.godsClickable == true)
         {
             FindObjectOfType<AudioSystem>().Play("GodClick");
+            FindObjectOfType<AudioSystem>().Play("GaneshVoice");
             animator.SetTrigger("talk");
             MainScript.SendMessage("GodClicked", stats.Name);
             EventFired.godsClickable = false;
