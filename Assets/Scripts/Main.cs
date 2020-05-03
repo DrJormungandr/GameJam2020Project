@@ -8,6 +8,7 @@ using TMPro;
 using Assets.Scripts.Enums;
 using System;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
@@ -69,8 +70,19 @@ public class Main : MonoBehaviour
     void StartEvent()
     {
         Debug.Log($"event {eventsCounter}");
+
         checkEventsPerAge();
-        Debug.Log($"age {agesCounter}");
+        if (agesCounter <= ages.Length - 1)
+        {
+            Debug.Log($"age {agesCounter}");
+        }
+        else
+        {
+            EndGame.Sender = "Player";
+            EndGame.won = true;
+            SceneManager.LoadScene("EndGame");
+            return;
+        }
         @event = eventService.GenerateEvent(this.eventList.ToArray(), ages[agesCounter]);
         eventsCounter++;
         this.textmesh.text = @event.Description;
@@ -96,6 +108,7 @@ public class Main : MonoBehaviour
             bubble.SetActive(true);
         }
         StopCoroutine(this.Wait());
+        EventFired.godsClickable = true;
         foreach( GameObject go in currentGods) {
             go.SendMessage("OnEventFired");
         }
@@ -105,19 +118,19 @@ public class Main : MonoBehaviour
     void GodClicked(string godName)
     {
         EventOption option = @event.Options.FirstOrDefault(ev => ev.GodName == godName);
-        eventService.EventResult(option, godObjectStats);
-        if (agesCounter < ages.Length )
+        try
         {
+            eventService.EventResult(option, godObjectStats);
+        } catch (KeyNotFoundException e)
+        {
+            Debug.LogError($"ERROR in: {option.Description}; WrongGodAffectedNames: {e}");
+        }
             StartCoroutine(Wait());
             foreach (GameObject bubble in bubbles)
             {
                 Destroy(bubble);
             }
             this.eventList.Remove(@event);
-        } else
-        {
-            Debug.Log("GAMOVER, YOU ARE WON!!!");
-        }
     }
 
     private void checkEventsPerAge()
