@@ -281,8 +281,8 @@ MonoBehaviour:
   - {fileID: 2665256821629749126}
   - {fileID: 2665256821216885922}
   m_Bounds:
-    m_Center: {x: 0.0025500953, y: 0.23386645, z: -15.830078}
-    m_Extent: {x: 0.44167435, y: 0.9002328, z: 0.0000014305115}
+    m_Center: {x: 0.0025502741, y: 0.2338664, z: -15.830078}
+    m_Extent: {x: 0.44167444, y: 0.9002328, z: 0.0000014305115}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2665256820522485373
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   - {fileID: 2665256822062941790}
   m_Bounds:
     m_Center: {x: -0.043878913, y: 0.08066642, z: -15.760106}
-    m_Extent: {x: 1.5001236, y: 1.7245342, z: 0.069973946}
+    m_Extent: {x: 1.5001235, y: 1.7245343, z: 0.069973946}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2665256821124418765
@@ -2160,9 +2160,10 @@ MonoBehaviour:
   stats:
     Name: Cthulhu
     Description: none
-    Dominance: 9
-  dominanceBar: {fileID: 7890983237240810413, guid: 0eaef0632073e8b4b9069c950bd306fc,
+    Dominance: 5
+  dominanceBar: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
     type: 3}
+  animator: {fileID: 2665256821608725457}
 --- !u!1 &2665256821612539320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,7 +3207,7 @@ MonoBehaviour:
   - {fileID: 2665256822034995553}
   - {fileID: 2665256821342807061}
   m_Bounds:
-    m_Center: {x: -0.042191267, y: -0.03909266, z: -15.830078}
+    m_Center: {x: -0.042191267, y: -0.03909254, z: -15.830078}
     m_Extent: {x: 1.4251386, y: 1.1475734, z: 0.0000014305115}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
