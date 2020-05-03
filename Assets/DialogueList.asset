@@ -10,5 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94845595d75e4fc41a8a8876d8647c3f, type: 3}
-  m_Name: New DialogueList
+  m_Name: DialogueList
   m_EditorClassIdentifier: 
+  Dialogues:
+  - dialogueId: 1
+    tiedToEvent: 1
+    sequence:
+    - CharacterName: Jesus
+      Phrase: "\u0419\u043E\u0443, \u041A\u0442\u0443\u043B\u0445\u0443, \u0442\u044B
+        \u0447\u0451 \u0442\u0430\u043A\u043E\u0439 \u043A\u0438\u0441\u043B\u044B\u0439?"
+    - CharacterName: Cthulhu
+      Phrase: "\u0414\u0430 \u044F \u043F\u0440\u043E\u0441\u0442\u043E 12 \u0447\u0430\u0441\u043E\u0432
+        \u043A\u043E\u0434\u0438\u043B \u044D\u0442\u0443 \u0441\u0438\u0441\u0442\u0435\u043C\u0443
+        \u0434\u0438\u0430\u043B\u043E\u0433\u043E\u0432"
+  - dialogueId: 2
+    tiedToEvent: 0
+    sequence:
+    - CharacterName: Ganesh
+      Phrase: "\u0425\u0430\u0445\u0430 \u044D\u0442\u043E \u043E\u0447\u0435\u043D\u044C
+        \u0441\u043C\u0435\u0448\u043D\u043E"
+    - CharacterName: Snek
+      Phrase: "\u041D\u0435 \u0432\u0438\u0436\u0443 \u043D\u0438\u0447\u0435\u0433\u043E
+        \u0441\u043C\u0435\u0448\u043D\u043E\u0433\u043E"
+    - CharacterName: Cthulhu
+      Phrase: "\u0410 \u043C\u043D\u0435 \u043D\u0440\u0430\u0432"
+  - dialogueId: 3
+    tiedToEvent: 1
+    sequence:
+    - CharacterName: Ganesh
+      Phrase: "\u042F \u043F\u043E\u043C\u043E\u0433\u0443 \u0432\u0430\u043C \u0437\u0430\u0442\u0435\u0441\u0442\u0438\u0442\u044C
+        \u0438\u0432\u0435\u043D\u0442)"

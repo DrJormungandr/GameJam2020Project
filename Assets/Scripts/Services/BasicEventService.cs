@@ -23,7 +23,7 @@ namespace Assets.Scripts.Services
                 try
                 {
                     godStats[godEffect.GodAffected].Dominance += godEffect.DominanceChange;
-                } catch (KeyNotFoundException e)
+                } catch (KeyNotFoundException)
                 {
                     errors.Add(godEffect.GodAffected);
                 }

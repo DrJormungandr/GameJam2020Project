@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class GodScript : MonoBehaviour
 {
-    bool clickActive = false;
     public God stats = new God();
     int dominanceVar;
     public GameObject dominanceBar;
@@ -68,7 +67,7 @@ public class GodScript : MonoBehaviour
 
     private void OnEventFired()
     {
-        clickActive = true;
+     
     }
 
     private void OnMouseOver() //highlights shit when you mouse over and when an event is active

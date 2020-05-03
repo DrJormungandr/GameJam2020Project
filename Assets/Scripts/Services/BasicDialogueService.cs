@@ -29,8 +29,11 @@ namespace Assets.Scripts.Services
             List<string> ids = new List<string>();
             foreach (DialogueModel dial in dialogList)
             {
-                if (!dial.tiedToEvent);
-                ids.Add(dial.dialogueId);
+                if (!dial.tiedToEvent)
+                {
+                    ids.Add(dial.dialogueId); 
+                }
+                
             }
             return ids;
         }

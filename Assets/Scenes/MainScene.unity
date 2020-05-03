@@ -681,6 +681,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
+        type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: GaneshVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
+        type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50c9fc361be33fa4f9a8609c05270129, type: 3}
+    - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.274
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
+        type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 0.79
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68e0af180444742438c6cc5ab4ae2249, type: 3}
 --- !u!1001 &1403586282

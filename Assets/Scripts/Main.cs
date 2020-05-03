@@ -199,9 +199,14 @@ public class Main : MonoBehaviour
         }
         else if (UnityEngine.Random.Range(0, 10) > 5)
         {
-            int randomIndex = UnityEngine.Random.Range(0, availableDialogueIds.Count - 1);
-            string id = availableDialogueIds[randomIndex];
-            StartCoroutine(StartDialogue(id));
+            if (availableDialogueIds.Count > 0) {                 
+                int randomIndex = UnityEngine.Random.Range(0, availableDialogueIds.Count - 1);                 
+                string id = availableDialogueIds[randomIndex];                 
+                StartCoroutine(StartDialogue(id)); 
+            } else             
+            {                
+                StartCoroutine(StartNextEvent());             
+            }
         }
         else
         {
