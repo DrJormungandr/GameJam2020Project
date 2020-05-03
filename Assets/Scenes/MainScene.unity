@@ -563,6 +563,12 @@ PrefabInstance:
       propertyPath: stats.Dominance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 981780131609475728, guid: 0e6ffc93ff8a26748b84ad00572f754d,
+        type: 3}
+      propertyPath: dominanceBar
+      value: 
+      objectReference: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
+        type: 3}
     - target: {fileID: 2665256821608725462, guid: 0e6ffc93ff8a26748b84ad00572f754d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -692,6 +698,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540262983393686172, guid: 9f92908ff1bb4f94e93bd709be33f6ea,
+        type: 3}
+      propertyPath: dominanceBar
+      value: 
+      objectReference: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f92908ff1bb4f94e93bd709be33f6ea, type: 3}
 --- !u!4 &1487572733 stripped
@@ -763,15 +775,16 @@ MonoBehaviour:
     \u0448\u0435\u0440\u0441\u0442\u044C\u044E \u0438 \u0447\u0435\u0442\u044B\u0440\u0435\u043C\u044F
     \u043D\u043E\u0433\u0430\u043C\u0438. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e29c3e1c79184c94c86e0a87d9098f98, type: 2}
+  m_sharedMaterial: {fileID: -8186042609059508975, guid: e29c3e1c79184c94c86e0a87d9098f98,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -837,7 +850,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 2
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -954,6 +967,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948660573}
     m_Modifications:
+    - target: {fileID: 891509978, guid: a26981c1895208e4b933b417ae268273, type: 3}
+      propertyPath: dominanceBar
+      value: 
+      objectReference: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
+        type: 3}
     - target: {fileID: 1358165067089393117, guid: a26981c1895208e4b933b417ae268273,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1023,16 +1041,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1953873263}
     m_Modifications:
-    - target: {fileID: 1742021394491277675, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742021394491277677, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1742021395227082896, guid: e2bf5ea7d8feb0141b655ac97939ab70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1088,35 +1096,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1742021395227082896, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742021395227082896, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742021395227082896, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1742021395227082910, guid: e2bf5ea7d8feb0141b655ac97939ab70,
         type: 3}
       propertyPath: m_Name
       value: scroll
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742021395595105491, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742021396087855308, guid: e2bf5ea7d8feb0141b655ac97939ab70,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2bf5ea7d8feb0141b655ac97939ab70, type: 3}
@@ -1380,6 +1363,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948660573}
     m_Modifications:
+    - target: {fileID: 495145845256096866, guid: 65c577011b256c3419d45f0a388b1fc9,
+        type: 3}
+      propertyPath: dominanceBar
+      value: 
+      objectReference: {fileID: 5708100580010777773, guid: afbd6b1546e61dd4e8601370c3f46061,
+        type: 3}
     - target: {fileID: 2957856285893104232, guid: 65c577011b256c3419d45f0a388b1fc9,
         type: 3}
       propertyPath: m_LocalPosition.x
