@@ -16,10 +16,21 @@ namespace Assets.Scripts.Services
         Canvas Canvas;
         public void EventResult(EventOption option, Dictionary<string, God> godStats)
         {
+            List<string> errors = new List<string>();
             List<EventGodEffect> godEffects = option.GodsEffect.ToList();
             foreach (EventGodEffect godEffect in godEffects)
             {
-                godStats[godEffect.GodAffected].Dominance += godEffect.DominanceChange;
+                try
+                {
+                    godStats[godEffect.GodAffected].Dominance += godEffect.DominanceChange;
+                } catch (KeyNotFoundException e)
+                {
+                    errors.Add(godEffect.GodAffected);
+                }
+            }
+            if (errors.ToArray().Length > 0)
+            {
+                throw new KeyNotFoundException(String.Join<string>(" ,", errors));
             }
         }
 
@@ -34,7 +45,7 @@ namespace Assets.Scripts.Services
                 }
             }
             int eventNum = UnityEngine.Random.Range(0, (ageEvents.ToArray().Length-1));
-            Event outEvent = eventsList[eventNum];
+            Event outEvent = ageEvents[eventNum];
             return outEvent;
         }
 

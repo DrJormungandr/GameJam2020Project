@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GodScript : MonoBehaviour
@@ -10,6 +11,7 @@ public class GodScript : MonoBehaviour
     public God stats = new God();
     int dominanceVar;
     public GameObject dominanceBar;
+    public int maxDominance = 10;
     private GameObject canvas;
     private GameObject MainScript;
     private Slider slider;
@@ -23,7 +25,7 @@ public class GodScript : MonoBehaviour
         var collider = GetComponent<CapsuleCollider>();
         slider = dbar.GetComponent<Slider>();
         slider.value = stats.Dominance;
-        dbar.transform.position = new Vector2(RectTransformUtility.WorldToScreenPoint(Camera.main, (collider.transform.position)).x, 450);
+        dbar.transform.position = new Vector2(collider.transform.position.x, 9);
 
     }
 
@@ -35,15 +37,26 @@ public class GodScript : MonoBehaviour
             slider.value = stats.Dominance;
             dominanceVar = stats.Dominance;
         }
+        if (stats.Dominance > maxDominance)
+        {
+            EndGame.Sender = stats.Name;
+            EndGame.won = true;
+            SceneManager.LoadScene("EndGame");
+        }
+        if (stats.Dominance < 1)
+        {
+            EndGame.Sender = stats.Name;
+            EndGame.won = false;
+            SceneManager.LoadScene("EndGame");
+        }
     }
 
     private void OnMouseDown()
     {
-        if (clickActive)
+        if (EventFired.godsClickable == true)
         {
             MainScript.SendMessage("GodClicked", stats.Name);
-            clickActive = false;
-
+            EventFired.godsClickable = false;
         }
     }
 
