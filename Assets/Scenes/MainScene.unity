@@ -1075,7 +1075,7 @@ PrefabInstance:
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}
@@ -1085,22 +1085,22 @@ PrefabInstance:
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}
       propertyPath: sounds.Array.data[1].name
-      value: GaneshVoice
+      value: Scroll
       objectReference: {fileID: 0}
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 50c9fc361be33fa4f9a8609c05270129, type: 3}
+      objectReference: {fileID: 8300000, guid: 4ab1b4f75022cac4abdf4165a96dcc16, type: 3}
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.274
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}
       propertyPath: sounds.Array.data[1].pitch
-      value: 0.79
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 4411399981988382947, guid: 68e0af180444742438c6cc5ab4ae2249,
         type: 3}

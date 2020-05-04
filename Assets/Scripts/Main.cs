@@ -76,6 +76,7 @@ public class Main : MonoBehaviour
     IEnumerator StartNextEvent() {
         yield return new WaitForSeconds(2);
         var scrl = Instantiate(scroll, this.canvas.transform);
+        FindObjectOfType<AudioSystem>().Play("Scroll");
         scrolls.Add(scrl);
         yield return new WaitForSeconds(1);
         StartEvent();
